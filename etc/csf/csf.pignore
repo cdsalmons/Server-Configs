@@ -1,0 +1,99 @@
+###############################################################################
+# Copyright 2006-2013, Way to the Web Limited
+# URL: http://www.configserver.com
+# Email: sales@waytotheweb.com
+###############################################################################
+# The following is a list of executables (exe) command lines (cmd) and
+# usernames (user) that lfd process tracking will ignore.
+#
+# You must use the following format:
+#
+# exe:/full/path/to/file
+# user:username
+# cmd:command line
+#
+# Or, perl regular expression matching (regex):
+#
+# pexe:/full/path/to/file as a perl regex[*]
+# puser:username as a perl regex[*]
+# pcmd:command line as a perl regex[*]
+#
+# [*]You must remember to escape characters correctly when using regex's, e.g.:
+# pexe:/home/.*/public_html/cgi-bin/script\.cgi
+# puser:bob\d.*
+# pcmd:/home/.*/command\s\to\smatch\s\.pl\s.*
+#
+# It is strongly recommended that you use command line ignores very carefully
+# as any process can change what is reported to the OS.
+#
+# For more information see readme.txt
+
+exe:/usr/local/cpanel/3rdparty/bin/english/webalizer
+exe:/usr/lib/courier-imap/bin/pop3d
+exe:/usr/lib/courier-imap/bin/imapd
+exe:/usr/sbin/pure-ftpd
+exe:/usr/local/cpanel/cpsrvd
+exe:/usr/local/cpanel/3rdparty/bin/imapd
+exe:/usr/local/apache/bin/httpd
+exe:/usr/local/cpanel/bin/cppop
+exe:/usr/sbin/sshd
+exe:/usr/sbin/proftpd
+exe:/usr/local/cpanel/3rdparty/bin/php
+exe:/usr/local/cpanel/3rdparty/bin/analog
+exe:/usr/local/urchin/bin/urchinwebd
+exe:/usr/local/cpanel/cpsrvd-ssl
+exe:/usr/bin/spamc
+exe:/usr/local/cpanel/bin/cppop-ssl
+exe:/usr/local/cpanel/bin/logrunner
+exe:/usr/local/cpanel/cpdavd
+exe:/usr/local/cpanel/bin/cpwrap
+exe:/usr/libexec/gam_server
+exe:/usr/sbin/named
+exe:/usr/sbin/exim
+exe:/usr/sbin/mysqld
+exe:/usr/sbin/mysqld_safe
+exe:/usr/libexec/hald-addon-acpi
+exe:/usr/sbin/hald
+exe:/bin/dbus-daemon
+exe:/usr/bin/dbus-daemon-1
+exe:/usr/libexec/hald-addon-keyboard
+exe:/usr/libexec/dovecot/imap
+exe:/usr/libexec/dovecot/pop3
+exe:/usr/sbin/nsd
+exe:/usr/libexec/dovecot/pop3-login
+exe:/usr/libexec/dovecot/imap-login
+exe:/var/cpanel/3rdparty/bin/php
+exe:/usr/bin/postgres
+exe:/usr/sbin/ntpd
+exe:/sbin/ntpd
+exe:/usr/local/cpanel/3rdparty/sbin/mydns
+exe:/usr/local/cpanel/3rdparty/bin/webalizer_lang/english
+exe:/usr/local/cpanel/3rdparty/perl/514/bin/spamd
+exe:/usr/local/cpanel/bin/cpuwatch
+exe:/usr/local/libexec/dovecot/pop3
+exe:/usr/local/libexec/dovecot/pop3-login
+exe:/usr/local/libexec/dovecot/imap
+exe:/usr/local/libexec/dovecot/imap-login
+exe:/usr/libexec/dovecot/anvil
+exe:/usr/libexec/dovecot/auth
+exe:/usr/local/nginx/sbin/nginx
+exe:/usr/bin/rsync
+
+user:spcm
+user:spcmnet
+user:marketers
+user:marketer
+user:cszsoft
+
+# Some additional entries that you might want to ignore on cPanel servers.
+# However, be aware of the security implications under "Process Tracking" in
+# the csf readme.txt when using these:
+#
+#cmd:spamd child
+#pcmd:/usr/local/cpanel/3rdparty/bin/python /usr/local/cpanel/3rdparty/mailman/bin/qrunner.*
+#pcmd:/usr/local/cpanel/3rdparty/bin/python /usr/local/cpanel/3rdparty/mailman/bin/mailmanctl.*
+#pcmd:/usr/bin/perl /usr/local/cpanel/3rdparty/bin/awstats\.pl.*
+#pcmd:/usr/bin/perl /usr/local/cpanel/base/awstats\.pl.*
+#pcmd:cpanellogd - (http|ftp) logs for .*
+#cmd:MailWatch SQL
+#pcmd:MailScanner:.*
